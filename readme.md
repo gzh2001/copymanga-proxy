@@ -9,5 +9,7 @@
 docker run -d \
 --name copymanga-proxy \
 -p 5000:5000 \
+-e APIKEY= \  # (可选)应用中使用的APIKEY，若为空自动生成32位密码。打印在日志里
+-e HOST= \  # 代理的域名，默认hi77-overseas.mangafuna.xyz
 tcol123/copymanga-proxy
 ```
