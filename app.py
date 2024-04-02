@@ -49,7 +49,7 @@ def proxy():
 
     try:
         # 向目标URL发送GET请求，并获取响应
-        response = requests.get(url, headers={'Host': app.config["HOST"]})
+        response = requests.get(url)
 
         # 将目标URL的响应内容返回给客户端
         return Response(response.content, status=response.status_code, content_type=response.headers['Content-Type'])
